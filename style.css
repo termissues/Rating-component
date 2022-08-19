@@ -7,7 +7,6 @@
     --mediumgrey: hsl(216, 12%, 54%);
     --blue: hsl(213, 19%, 18%);
     --darkblue: hsl(216, 12%, 8%);
-
 }
 
 body {
@@ -18,11 +17,10 @@ body {
 
 main {
     padding: 25px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
 }
 
 h1,
@@ -43,7 +41,7 @@ p {
 }
 
 .rating__card {
-    width: 22rem;
+    max-width: 22rem;
     padding: 35px;
     border-radius: 1rem;
     background-image: linear-gradient(-60deg, var(--darkblue), var(--blue));
@@ -119,8 +117,26 @@ p {
     text-align: center;
 }
 
-@media screen and (max-width: 472px) {
+@media screen and (max-width: 480px) {
     .rating__card {
-       width: 15rem;
+        min-width: 18rem;
+        padding: 23px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .rating__button {
+        height: 40px;
+        width: 40px;
+        font-size: small;
+    }
+
+    .rating__received p {
+        margin: 27px 10%;
+    }
+
+    .rating__card {
+        min-width: 15rem;
+        padding: 10px;
     }
 }
